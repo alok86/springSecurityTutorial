@@ -1,0 +1,52 @@
+[
+  {
+    "_class": "com.softwarecafe.springSecurityTutorial.model.Questions",
+    "question": "Who is the prime minister of India",
+    "answer1": "rahul gandhi",
+    "answer2": "J P Nadda",
+    "answer3": "Sri Narendra Modi",
+    "answer4": "Sri Atal bihari bhajpai",
+    "answerRight": "(C) Sri Narendra Modi",
+    "description": "Political Question"
+  },
+  {
+    "_class": "com.softwarecafe.springSecurityTutorial.model.Questions",
+    "question": "In which Continent India is located ",
+    "answer1": "Europ",
+    "answer2": "Australia",
+    "answer3": "Africa",
+    "answer4": "Asia",
+    "answerRight": "(d) Asia",
+    "description": "Geographical Question"
+  },
+  {
+    "_class": "com.softwarecafe.springSecurityTutorial.model.Questions",
+    "question": "What will be tha answer of 111111111+11111111+1111111+111111+11111+1111+111+11+1",
+    "answer1": "98746321",
+    "answer2": "123456879",
+    "answer3": "123456789",
+    "answer4": "123546789",
+    "answerRight": "(C) 123456789",
+    "description": "Mathematical Question"
+  },
+  {
+    "_class": "com.softwarecafe.springSecurityTutorial.model.Questions",
+    "question": "What is java",
+    "answer1": "A Programming Language",
+    "answer2": "A scripting Language",
+    "answer3": "A desigining Software",
+    "answer4": "A music player",
+    "answerRight": "(A) A Programming Language",
+    "description": "Computer Question"
+  },
+  {
+    "_class": "com.softwarecafe.springSecurityTutorial.model.Questions",
+    "question": "How many bones are there in human body",
+    "answer1": "107",
+    "answer2": "207",
+    "answer3": "310",
+    "answer4": "206",
+    "answerRight": "(d) 206",
+    "description": "Biology Question"
+  }
+]
