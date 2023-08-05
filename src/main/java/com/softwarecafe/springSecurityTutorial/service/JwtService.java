@@ -13,7 +13,7 @@ import java.util.Map;
 
 @Service
 public class JwtService {
-    private static final String SECRET = "198f70d4d3abee3521e6503c319510615d51fe46bb1efda8b99542c1289ef11e";
+    private static final String SECRET = "5367566B59703373367639792F423F4528482B4D6251655468576D5A71347437";
 
     public String generateToken(String userName) {
         Map<String , Object> claim = new HashMap<>();
