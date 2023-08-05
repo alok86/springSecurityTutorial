@@ -4,19 +4,19 @@ import com.softwarecafe.springSecurityTutorial.model.UserInfo;
 import com.softwarecafe.springSecurityTutorial.service.UserInfoUserDetailService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
-import org.springframework.data.repository.init.Jackson2RepositoryPopulatorFactoryBean;
+//import org.springframework.core.io.ClassPathResource;
+//import org.springframework.core.io.Resource;
+//import org.springframework.data.repository.init.Jackson2RepositoryPopulatorFactoryBean;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
+//import org.springframework.security.core.userdetails.User;
+//import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+//import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 
@@ -59,7 +59,7 @@ public class WebConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http.authorizeHttpRequests(authorizationManagerRequestMatcherRegistry ->
-                authorizationManagerRequestMatcherRegistry.requestMatchers("/api/welcome","/userservice/new")
+                authorizationManagerRequestMatcherRegistry.requestMatchers("/api/welcome","/userservice/new","/userservice/authentication")
                         .permitAll())
                 .authorizeHttpRequests(authorizationManagerRequestMatcherRegistry ->
                         authorizationManagerRequestMatcherRegistry
@@ -67,7 +67,8 @@ public class WebConfig {
                                 .authenticated())
           //      .formLogin(Customizer.withDefaults())
                 .httpBasic(Customizer.withDefaults())
-                .csrf(csrf->csrf.disable());
+                .csrf(csrf->csrf.disable())
+                .logout(logout->logout.permitAll());
 
         return http.build();
     }
