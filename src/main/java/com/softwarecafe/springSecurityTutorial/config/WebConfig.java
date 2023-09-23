@@ -73,12 +73,13 @@ public class WebConfig {
 
         http    .csrf(csrf->csrf.disable())
                 .authorizeHttpRequests(authorizationManagerRequestMatcherRegistry ->
-                authorizationManagerRequestMatcherRegistry.requestMatchers("/api/welcome","/userservice/new","/userservice/authentication")
+                authorizationManagerRequestMatcherRegistry.requestMatchers("/api/welcome","/userservice/new","/userservice/authentication","/userservice/refreshToken")
                         .permitAll())
                 .authorizeHttpRequests(authorizationManagerRequestMatcherRegistry ->
                         authorizationManagerRequestMatcherRegistry
                                 .requestMatchers("/api/questions","/api/question/**")
                                 .authenticated())
+
                 .sessionManagement(session-> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider())
